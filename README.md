@@ -14,6 +14,14 @@
 
 JSONには配色ID・名称に加え、`designPreferences.paletteColors` に資料の3色を記録します。制作用の `?reference=1` 元画像比較プレビューは顧客用の配色選択とは別のもので、保存した文章・画像・配色を適用しません。
 
+## GitHub Pagesでの公開
+
+公開URL：<https://michiocorporation.github.io/sikakumeisi/>
+
+GitHub Pagesは `main` ブランチのルートを公開元として使用します。ルートの `index.html` から `dist/` のWebヒアリング画面へ自動的に移動します。URLのクエリとページ内リンクも引き継ぎます。`.nojekyll` により、HTML・JavaScript・画像をJekyllで加工せず配信します。
+
+更新時は、このリポジトリの `dist/` と必要な生成元を更新して `main` にpushしてください。見本を再生成する場合は `node scripts/generate-previews.mjs`、確認は `node --test tests/model.test.mjs` です。公開URLはそのまま使えます。
+
 ## 起動
 
 `プレビューを起動.cmd` をダブルクリックするか、Node.jsで `node scripts/serve.mjs` を実行し、表示されたローカルURLを開きます。外部パッケージのインストールは不要です。
