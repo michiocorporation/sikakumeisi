@@ -1,0 +1,186 @@
+/* Cheat-sheet color layer. The source-image comparison page is excluded.
+   Colors are assigned by visual role; photography, logos, layouts and texture stay intact. */
+body[data-palette]{--blue:var(--theme-primary);--ink:var(--theme-ink);--pale:var(--theme-soft);color:var(--theme-ink);background:var(--theme-paper)}
+body[data-palette] .site-header{background:var(--theme-white)}
+body[data-palette] .hero{background-color:var(--theme-paper)}
+body[data-palette] .identity-card,body[data-palette] .note-card{border-color:var(--theme-tint)}
+body[data-palette] .identity-card .location{border-top-color:var(--theme-tint)}
+body[data-palette] .value-strip>span{background:var(--theme-soft)}
+body[data-palette] .deco-a{background:var(--theme-tint)}
+body[data-palette] .about-section,body[data-palette] .site-footer{border-color:var(--theme-tint)}
+body[data-palette] .services-section{background:var(--theme-soft)}
+/* 01: independent SVG planes, icons and typography. */
+body[data-palette] .flat-artboard{background:var(--theme-paper)}
+body[data-palette] .flat-start,body[data-palette] .flat-primary{background:var(--theme-primary)}
+body[data-palette] .flat-name{color:var(--theme-ink)}
+body[data-palette] .flat-kicker,body[data-palette] .flat-actions,body[data-palette] .flat-handwritten,body[data-palette] .flat-section-kicker,body[data-palette] .flat-profile-details a,body[data-palette] .flat-qualifications .flat-icon{color:var(--theme-primary)}
+body[data-palette] .flat-secondary{border-color:var(--theme-primary)}
+body[data-palette] .flat-intro,body[data-palette] .flat-profile-message,body[data-palette] .flat-profile-details,body[data-palette] .flat-qualifications li,body[data-palette] .flat-benefits p,body[data-palette] .flat-lower footer,body[data-palette] .flat-sample-note{color:var(--theme-muted)}
+body[data-palette] .flat-benefit-icon{background:var(--theme-soft);color:var(--theme-primary)}
+body[data-palette] .flat-avatar,body[data-palette] .flat-profile-rule{background:var(--theme-tint)}
+body[data-palette] .flat-benefits{background:transparent}
+body[data-palette] .flat-lower>section{border-color:var(--theme-tint)}
+body[data-palette] .flat-planes>path:first-of-type{fill:var(--theme-soft)}
+body[data-palette] #light-blue stop:first-child{stop-color:var(--theme-soft)}
+body[data-palette] #light-blue stop:last-child{stop-color:var(--theme-tint)}
+body[data-palette] #strong-blue stop:first-child{stop-color:var(--theme-mid)}
+body[data-palette] #strong-blue stop:last-child{stop-color:var(--theme-primary)}
+body[data-palette] #lower-blue stop:first-child{stop-color:var(--theme-primary)}
+body[data-palette] #lower-blue stop:last-child{stop-color:var(--theme-strong)}
+/* 02: retain comic outlines and the contrasting accent. */
+body[data-palette].style-pop .hero{background:radial-gradient(var(--theme-tint) 1.4px,transparent 1.5px) 0 0/10px 10px,var(--theme-paper)}
+body[data-palette].style-pop h1{border-bottom-color:var(--theme-accent)}
+body[data-palette].style-pop .comic-frame{background:var(--theme-accent);box-shadow:9px 9px var(--theme-primary)}
+body[data-palette].style-pop .pop-star,body[data-palette].style-pop .cta{background:var(--theme-accent);color:var(--theme-ink)}
+body[data-palette].style-pop .value-strip>span{background:var(--theme-surface)}
+/* 03: paper elevations. */
+body[data-palette].style-material .hero{background:linear-gradient(135deg,var(--theme-paper),var(--theme-soft))}
+body[data-palette].style-material .value-strip>span{background:var(--theme-surface)}
+/* 04: keep the restrained white space. */
+body[data-palette].style-minimal .nav-contact{border-color:var(--theme-primary);color:var(--theme-primary)}
+body[data-palette].style-minimal .edition{color:var(--theme-muted)}
+/* 05: warm paper and translucent ink. */
+body[data-palette].style-wabi .site-header{background:transparent}
+body[data-palette].style-wabi .hero{background:radial-gradient(ellipse at 90% 105%,var(--theme-tint),transparent 47%),repeating-linear-gradient(22deg,#fff0 0 3px,#7c756605 4px 5px)}
+body[data-palette].style-wabi .identity-card,body[data-palette].style-wabi .note-card{background:var(--theme-paper)}
+body[data-palette].style-wabi .ink-ring{border-color:var(--theme-tint);border-left-color:var(--theme-soft)}
+body[data-palette].style-wabi .value-strip>span{background:none;border-color:var(--theme-shadow)}
+/* 06: separate grid cells. */
+body[data-palette].style-bento .hero{background:var(--theme-soft)}
+body[data-palette].style-bento .bento-note .note-card{background:var(--theme-tint)}
+body[data-palette].style-bento .value-strip>span{background:var(--theme-surface)}
+/* 07: solid field beside structural black rules. */
+body[data-palette].style-brutal .brutal-aside{background:var(--theme-primary)}
+body[data-palette].style-brutal .brutal-aside .note-card{border-color:var(--theme-surface)}
+body[data-palette].style-brutal .value-strip>span{background:var(--theme-surface)}
+/* 08: tinted chrome and contrasting highlights. */
+body[data-palette].style-y2k .hero{background:radial-gradient(ellipse at 75% 60%,var(--theme-mid) 0,transparent 55%),linear-gradient(150deg,var(--theme-soft),var(--theme-surface) 42%,var(--theme-tint))}
+body[data-palette].style-y2k h1{color:var(--theme-strong);text-shadow:2px 2px var(--theme-surface),4px 5px var(--theme-shadow)}
+body[data-palette].style-y2k .hero-visual>.portrait{border-color:var(--theme-soft);box-shadow:0 0 0 2px var(--theme-mid),0 0 38px var(--theme-surface)}
+body[data-palette].style-y2k .identity-card,body[data-palette].style-y2k .note-card{border-color:var(--theme-soft);background:linear-gradient(135deg,var(--theme-surface),var(--theme-tint));box-shadow:3px 4px var(--theme-mid)}
+body[data-palette].style-y2k .orbit-ring{border-color:var(--theme-tint);box-shadow:inset 0 3px 4px var(--theme-strong),0 6px 2px var(--theme-mid),0 -4px 4px var(--theme-surface)}
+body[data-palette].style-y2k .y2k-label{color:var(--theme-primary)}
+body[data-palette].style-y2k .cta{background:linear-gradient(var(--theme-primary),var(--theme-strong));box-shadow:0 2px var(--theme-shadow)}
+/* 09: stacked planes keep their depth. */
+body[data-palette].style-isometric .hero{background:linear-gradient(135deg,var(--theme-surface),var(--theme-soft))}
+body[data-palette].style-isometric .iso-floor{background:var(--theme-tint);box-shadow:18px 22px var(--theme-mid),38px 44px var(--theme-soft)}
+body[data-palette].style-isometric .iso-stack .identity-card,body[data-palette].style-isometric .iso-stack .note-card{box-shadow:7px 7px var(--theme-shadow)}
+body[data-palette].style-isometric .iso-cube{background:var(--theme-primary);box-shadow:10px 10px var(--theme-strong)}
+body[data-palette].style-isometric .value-strip>span{background:var(--theme-surface);border-color:var(--theme-tint)}
+/* 10: collage offsets stay unchanged. */
+body[data-palette].style-anti .hero{background:linear-gradient(160deg,var(--theme-surface) 60%,var(--theme-soft) 60%)}
+body[data-palette].style-anti .tape{background:var(--theme-strong)}
+/* 11: multicolor diffused light. */
+body[data-palette].style-aurora .hero{background:var(--theme-soft)}
+body[data-palette].style-aurora .light-a{background:conic-gradient(var(--theme-mid),var(--theme-accent-soft),var(--theme-secondary),var(--theme-mid))}
+body[data-palette].style-aurora .light-b{background:var(--theme-secondary)}
+body[data-palette].style-aurora .hero-visual>.portrait{box-shadow:0 0 60px var(--theme-tint)}
+body[data-palette].style-aurora .cta{background:linear-gradient(110deg,var(--theme-strong),var(--theme-primary));box-shadow:0 5px 20px var(--theme-shadow)}
+/* 12: glass remains transparent. */
+body[data-palette].style-glass .hero{background:linear-gradient(135deg,var(--theme-soft),var(--theme-tint) 60%,var(--theme-shadow))}
+body[data-palette].style-glass .glass-orb{background:radial-gradient(circle at 30% 25%,var(--theme-surface),var(--theme-tint) 35%,var(--theme-mid) 70%,var(--theme-primary));box-shadow:inset -12px -12px 25px var(--theme-shadow)}
+body[data-palette].style-glass .value-strip>span,body[data-palette].style-aurora .value-strip>span{background:var(--theme-glass)}
+/* 13: clay surfaces and inset shadows. */
+body[data-palette].style-clay .hero{background:var(--theme-soft)}
+body[data-palette].style-clay .clay-world>.portrait{border-color:var(--theme-soft);box-shadow:12px 12px 23px var(--theme-shadow),-12px -12px 20px var(--theme-surface)}
+body[data-palette].style-clay .identity-card,body[data-palette].style-clay .note-card{background:var(--theme-tint);border-color:var(--theme-soft);box-shadow:8px 10px 18px var(--theme-shadow),inset -5px -5px 9px var(--theme-shadow),inset 5px 5px 10px var(--theme-surface)}
+body[data-palette].style-clay .clay-bubble{color:var(--theme-primary);background:var(--theme-tint);box-shadow:inset -5px -5px 10px var(--theme-shadow),inset 5px 5px 8px var(--theme-surface),8px 8px 15px var(--theme-shadow)}
+body[data-palette].style-clay .cta{box-shadow:inset -3px -3px 5px var(--theme-strong),inset 3px 3px 5px var(--theme-mid),5px 5px 8px var(--theme-shadow)}
+body[data-palette].style-clay .value-strip>span{background:var(--theme-soft);box-shadow:inset 3px 3px 5px var(--theme-surface),5px 5px 10px var(--theme-shadow)}
+/* 14: three related colors preserve playful geometry. */
+body[data-palette].style-memphis .hero{background:var(--theme-paper)}
+body[data-palette].style-memphis .hero-visual>.portrait{border-bottom-color:var(--theme-accent)}
+body[data-palette].style-memphis .memphis-shapes i:nth-child(1){background:var(--theme-tint)}
+body[data-palette].style-memphis .memphis-shapes i:nth-child(2){background:var(--theme-secondary)}
+body[data-palette].style-memphis .memphis-shapes i:nth-child(3){background:repeating-linear-gradient(0deg,var(--theme-primary) 0 4px,transparent 4px 12px)}
+body[data-palette].style-memphis .identity-card{box-shadow:8px 8px var(--theme-shadow)}
+body[data-palette].style-memphis .note-card{box-shadow:8px 8px var(--theme-accent)}
+body[data-palette].style-memphis .value-strip>span:nth-child(2){background:var(--theme-accent-soft)}
+/* 15: color blocks remain distinct within the black grid. */
+body[data-palette].style-stijl .hero{background:#111}
+body[data-palette].style-stijl .mondrian-yellow{background:var(--theme-accent)}
+body[data-palette].style-stijl .mondrian-red{background:var(--theme-secondary)}
+body[data-palette].style-stijl .mondrian-blue{background:var(--theme-primary)}
+body[data-palette].style-stijl .value-strip>span{background:var(--theme-surface)}
+/* 16: matching base and raised surfaces are essential to this style. */
+body[data-palette].style-neumo,body[data-palette].style-neumo .site-header,body[data-palette].style-neumo .hero{background:var(--theme-soft)}
+body[data-palette].style-neumo .neumo-world>.portrait{border-color:var(--theme-soft);box-shadow:13px 13px 28px var(--theme-shadow),-13px -13px 28px var(--theme-surface)}
+body[data-palette].style-neumo .identity-card,body[data-palette].style-neumo .note-card,body[data-palette].style-neumo .value-strip>span{background:var(--theme-soft);box-shadow:7px 7px 16px var(--theme-shadow),-7px -7px 16px var(--theme-surface)}
+body[data-palette].style-neumo .cta,body[data-palette].style-neumo .sub-cta{box-shadow:5px 5px 10px var(--theme-shadow),-5px -5px 10px var(--theme-surface)}
+body[data-palette].style-neumo .sub-cta{background:var(--theme-soft)}
+/* 17: print dots and seal. */
+body[data-palette].style-halftone .hero{background:var(--theme-paper)}
+body[data-palette].style-halftone .dot-field{background:radial-gradient(var(--theme-primary) 1.5px,transparent 1.8px) 0 0/7px 7px}
+body[data-palette].style-halftone .halftone-visual .identity-card{box-shadow:6px 6px var(--theme-primary)}
+body[data-palette].style-halftone .round-seal{background:var(--theme-primary)}
+body[data-palette].style-halftone .value-strip>span{background:var(--theme-surface)}
+/* 18: paper, dark ink and accent sticker. */
+body[data-palette].style-punk .hero{background:repeating-linear-gradient(-25deg,var(--theme-soft) 0 2px,var(--theme-surface) 2px 7px)}
+body[data-palette].style-punk .eyebrow,body[data-palette].style-punk .paper-a{background:var(--theme-primary)}
+body[data-palette].style-punk .punk-sticker{background:var(--theme-accent);color:var(--theme-ink)}
+body[data-palette].style-punk .cta{box-shadow:5px 5px var(--theme-primary)}
+body[data-palette].style-punk .value-strip>span{background:var(--theme-surface)}
+/* 19: stepped scenery and window chrome. */
+body[data-palette].style-pixel .hero{background:linear-gradient(var(--theme-tint),var(--theme-soft) 80%,var(--theme-accent-soft) 80%)}
+body[data-palette].style-pixel h1{text-shadow:3px 3px var(--theme-shadow)}
+body[data-palette].style-pixel .pixel-title{background:var(--theme-primary)}
+body[data-palette].style-pixel .pixel-ground{background:repeating-linear-gradient(90deg,var(--theme-secondary) 0 16px,var(--theme-accent) 16px 32px);border-top-color:var(--theme-strong)}
+body[data-palette].style-pixel .pixel-window{box-shadow:8px 8px var(--theme-shadow)}
+body[data-palette].style-pixel .value-strip>span{background:var(--theme-surface);box-shadow:3px 3px var(--theme-shadow)}
+/* 20: highlight, midtone and shadow retain the glossy volume. */
+body[data-palette].style-liquid .hero{background:linear-gradient(145deg,var(--theme-paper),var(--theme-tint))}
+body[data-palette].style-liquid .liquid-blob{background:radial-gradient(ellipse at 30% 25%,var(--theme-surface) 0%,var(--theme-tint) 15%,var(--theme-mid) 35%,var(--theme-primary) 63%,var(--theme-tint) 85%);box-shadow:inset 7px 10px 17px var(--theme-highlight),inset -18px -20px 30px var(--theme-mid),15px 25px 40px var(--theme-shadow)}
+body[data-palette].style-liquid .liquid-world>.portrait{border-color:var(--theme-soft);box-shadow:0 15px 35px var(--theme-shadow)}
+body[data-palette].style-liquid .identity-card,body[data-palette].style-liquid .note-card{box-shadow:5px 8px 15px var(--theme-shadow)}
+body[data-palette].style-liquid .cta{background:linear-gradient(var(--theme-primary),var(--theme-strong));box-shadow:0 3px 12px var(--theme-shadow)}
+body[data-palette].style-liquid .value-strip>span{background:var(--theme-glass)}
+/* The cheat sheet assigns base to surfaces, main to type, accent to actions.
+   Explicit foreground pairs also support its three dark palettes. */
+body[data-palette] .site-header{background:var(--theme-paper)}
+body[data-palette] .identity-card,body[data-palette] .note-card{background-color:var(--theme-surface);color:var(--theme-ink)}
+body[data-palette] .portrait figcaption{background:var(--theme-glass);color:var(--theme-muted)}
+body[data-palette] .bento-copy,body[data-palette] .mondrian-copy,body[data-palette] .mondrian-photo,body[data-palette] .mondrian-bottom,body[data-palette] .stamp,body[data-palette] .pixel-window{background:var(--theme-paper)}
+body[data-palette] .minimal-image .portrait{background:var(--theme-soft)}
+body[data-palette] .sub-cta{background:var(--theme-glass);color:var(--theme-primary);border-color:var(--theme-primary)}
+body[data-palette] .flat-profile,body[data-palette] .flat-qualifications{background:var(--theme-surface)}
+body[data-palette] .flat-secondary{background:var(--theme-glass)}
+body[data-palette] .flat-planes>path:last-of-type{fill:var(--theme-paper)}
+body[data-palette] .flat-benefit-icon [fill="white"]{fill:var(--theme-soft)}
+body[data-palette] .flat-qualifications [fill="white"]{fill:var(--theme-on-main)}
+body[data-palette] .flat-qualifications [stroke="white"]{stroke:var(--theme-on-main)}
+body[data-palette] .flat-signoff{color:var(--theme-on-main)}
+body[data-palette] .flat-signoff>span{background:currentColor}
+body[data-palette] .flat-name,body[data-palette] .flat-headline,body[data-palette] h1{color:var(--theme-main)}
+body[data-palette][data-palette-tone] :is(.cta,.nav-contact,.flat-start,.flat-primary){background:var(--theme-accent);color:var(--theme-on-accent)}
+body[data-palette][data-palette-tone] :is(.cta,.nav-contact,.flat-start,.flat-primary):hover{background-color:var(--theme-accent-hover)}
+body[data-palette].style-minimal .nav-contact{background:none;color:var(--theme-primary)}
+body[data-palette].style-pop h1,body[data-palette].style-halftone h1{text-shadow:2px 2px var(--theme-paper)}
+body[data-palette].style-material .hero-visual>.portrait{box-shadow:0 16px 24px var(--theme-shadow)}
+body[data-palette].style-material .identity-card,body[data-palette].style-material .note-card{box-shadow:0 6px 16px var(--theme-shadow)}
+body[data-palette].style-material .cta{box-shadow:0 4px 8px var(--theme-shadow)}
+body[data-palette].style-material .value-strip>span{box-shadow:0 3px 6px var(--theme-shadow)}
+body[data-palette].style-brutal .brutal-aside,body[data-palette].style-brutal .brutal-aside .note-card,body[data-palette].style-brutal .brutal-aside .note-icon{color:var(--theme-on-main)}
+body[data-palette].style-brutal .brutal-aside .note-card{background:transparent;border-color:currentColor}
+body[data-palette].style-y2k .cta,body[data-palette].style-aurora .cta,body[data-palette].style-liquid .cta{background:linear-gradient(110deg,var(--theme-accent),var(--theme-accent-hover))}
+body[data-palette].style-clay .cta{box-shadow:inset -3px -3px 5px var(--theme-accent-hover),inset 3px 3px 5px var(--theme-highlight),5px 5px 8px var(--theme-shadow)}
+body[data-palette].style-anti .tape{color:var(--theme-on-main)}
+body[data-palette].style-aurora .identity-card,body[data-palette].style-aurora .note-card{background:var(--theme-glass);border-color:var(--theme-tint);box-shadow:0 12px 28px var(--theme-shadow)}
+body[data-palette].style-glass .glass-copy{background:var(--theme-glass-faint);border-color:var(--theme-tint);box-shadow:0 10px 30px var(--theme-shadow)}
+body[data-palette].style-glass .identity-card,body[data-palette].style-glass .note-card{background:var(--theme-glass);border-color:var(--theme-tint);box-shadow:0 8px 25px var(--theme-shadow)}
+body[data-palette].style-stijl .mondrian-yellow .identity-card{background:none;color:var(--theme-on-accent)}
+body[data-palette].style-stijl .mondrian-yellow .small-label{color:inherit}
+body[data-palette].style-stijl .mondrian-blue .note-card{background:none;color:var(--theme-on-main)}
+body[data-palette].style-halftone .round-seal{color:var(--theme-on-main);border-color:var(--theme-surface)}
+body[data-palette].style-punk h1{background:var(--theme-paper)}
+body[data-palette].style-punk .eyebrow{color:var(--theme-on-main)}
+body[data-palette].style-punk .punk-visual .note-card{background:var(--theme-main);color:var(--theme-on-main);border-color:var(--theme-paper)}
+body[data-palette].style-punk .punk-visual .note-icon{color:inherit}
+body[data-palette].style-pixel .pixel-title{color:var(--theme-on-main)}
+body[data-palette].style-pixel .pixel-cloud{background:var(--theme-highlight)}
+body[data-palette].style-liquid .identity-card,body[data-palette].style-liquid .note-card{background:var(--theme-glass);border-color:var(--theme-tint)}
+body[data-palette-tone="dark"] .flat-brand-sample .flat-name{opacity:1}
+body[data-palette-tone="dark"] .flat-main-wordmark{display:none}
+body[data-palette-tone="dark"] .flat-custom-logo,body[data-palette-tone="dark"] .flat-default-logo,body[data-palette-tone="dark"] .brand img{background:#fff;border-radius:4px;mix-blend-mode:normal}
+body[data-palette].style-pop .pop-star,body[data-palette].style-punk .punk-sticker{color:var(--theme-on-accent)}
+body[data-palette-tone="dark"].style-halftone .halftone-visual>.portrait{mix-blend-mode:normal}
+body[data-palette-tone=dark] .flat-custom-logo{background:#fff;padding:.25cqw .5cqw;border-radius:.4cqw}

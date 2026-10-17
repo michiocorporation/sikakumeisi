@@ -1,0 +1,22 @@
+window.DESIGNS = [
+  {id:'01-flat',name:'フラットデザイン',en:'FLAT DESIGN',group:'trust',tags:['すっきり','明快','信頼感'],desc:'装飾を控え、情報がまっすぐ伝わる。',layout:'split'},
+  {id:'02-pop',name:'ポップアート',en:'POP ART',group:'bold',tags:['元気','大胆','親しみ'],desc:'コミックのような遊び心と、弾む言葉。',layout:'poster'},
+  {id:'03-material',name:'マテリアルデザイン',en:'MATERIAL DESIGN',group:'trust',tags:['整然','立体感','わかりやすさ'],desc:'カードと影で、情報のつながりを整理。',layout:'cards'},
+  {id:'04-minimal',name:'ミニマリズム',en:'MINIMALISM',group:'quiet',tags:['余白','静けさ','洗練'],desc:'必要な言葉だけを、ゆったりと届ける。',layout:'minimal'},
+  {id:'05-wabi',name:'わびさび',en:'WABI-SABI',group:'quiet',tags:['和の趣','自然体','上品'],desc:'和紙の質感と、静かな余韻。',layout:'editorial'},
+  {id:'06-bento',name:'Bento Grid',en:'BENTO GRID',group:'trust',tags:['整理','多彩','見つけやすい'],desc:'お弁当箱のように、伝えたいことを配置。',layout:'bento'},
+  {id:'07-brutal',name:'Webブルータリズム',en:'WEB BRUTALISM',group:'bold',tags:['力強い','直線的','印象的'],desc:'太い文字と、飾らない構造の強さ。',layout:'brutal'},
+  {id:'08-y2k',name:'Y2K',en:'Y2K',group:'future',tags:['光沢','未来的','華やか'],desc:'メタリックな光と、近未来の空気感。',layout:'orbit'},
+  {id:'09-isometric',name:'アイソメトリック',en:'ISOMETRIC',group:'future',tags:['立体的','構造','先進性'],desc:'奥行きのある構成で、仕事を立体的に。',layout:'isometric'},
+  {id:'10-anti',name:'アンチデザイン',en:'ANTI-DESIGN',group:'bold',tags:['自由','意外性','個性的'],desc:'重なりとずれがつくる、忘れない印象。',layout:'collage'},
+  {id:'11-aurora',name:'オーロラUI',en:'AURORA UI',group:'future',tags:['透明感','光','やわらかさ'],desc:'淡い光のグラデーションに包まれる。',layout:'glow'},
+  {id:'12-glass',name:'グラスモーフィズム',en:'GLASSMORPHISM',group:'future',tags:['透け感','軽やか','洗練'],desc:'すりガラスを重ねた、軽やかな奥行き。',layout:'glass'},
+  {id:'13-clay',name:'クレイモーフィズム',en:'CLAYMORPHISM',group:'soft',tags:['丸み','やさしい','親しみ'],desc:'粘土のようにふっくら、親しみやすく。',layout:'clay'},
+  {id:'14-memphis',name:'コーポレートメンフィス',en:'CORPORATE MEMPHIS',group:'soft',tags:['明るい','幾何学','開放的'],desc:'形と色のリズムで、軽快に伝える。',layout:'memphis'},
+  {id:'15-stijl',name:'デ・ステイル',en:'DE STIJL',group:'bold',tags:['原色','格子','造形的'],desc:'赤・青・黄と直線が生む、端正な個性。',layout:'mondrian'},
+  {id:'16-neumo',name:'ニューモーフィズム',en:'NEUMORPHISM',group:'soft',tags:['やわらかい影','穏やか','清潔感'],desc:'表面から浮かび上がる、やさしい形。',layout:'soft'},
+  {id:'17-halftone',name:'ハーフトーン',en:'HALFTONE',group:'bold',tags:['ドット','印刷感','グラフィック'],desc:'網点の陰影で、紙面のような存在感。',layout:'halftone'},
+  {id:'18-punk',name:'パンクデザイン',en:'PUNK DESIGN',group:'bold',tags:['切り貼り','エネルギー','自由'],desc:'破れた紙と大胆な文字で、自分らしく。',layout:'punk'},
+  {id:'19-pixel',name:'ピクセルアート',en:'PIXEL ART',group:'soft',tags:['遊び心','レトロ','ユニーク'],desc:'小さな四角で描く、懐かしく新しい世界。',layout:'pixel'},
+  {id:'20-liquid',name:'3Dグラデーション / リキッドUI',en:'LIQUID UI',group:'future',tags:['流れる形','光沢','先進性'],desc:'なめらかな曲線と、流れるような光。',layout:'liquid'}
+];

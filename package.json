@@ -1,0 +1,11 @@
+{
+  "name": "shikakumeishi-hearing",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "generate": "node scripts/generate-previews.mjs",
+    "test": "node --test tests/model.test.mjs"
+  }
+}

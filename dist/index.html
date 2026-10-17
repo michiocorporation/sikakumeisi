@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="あなたの情報を20種類のデザイン見本に反映。言葉にしにくい好みを、見ながら伝えるシカクメイシのWebヒアリング。">
+  <title>あなたらしさを見つける｜シカクメイシ Webヒアリング</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Crect width='60' height='60' rx='12' fill='%231a2b44'/%3E%3Cpath d='M30 10 50 30 30 50 10 30Z' fill='%23f3f0e7'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="app.css"><script src="catalog.js" defer></script><script src="palettes.js" defer></script><script src="model.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="app-header"><a href="index.html" class="app-brand" aria-label="シカクメイシ ホーム"><img src="assets/brand.png" alt="シカクメイシ"></a><div class="header-divider"></div><span class="header-label">Webヒアリング</span><div class="header-right"><span class="save-state" id="save-state" aria-live="polite"><i></i> このブラウザに自動保存</span><button class="quiet-button" id="help-button">使い方 <span class="circle-help">?</span></button></div></header>
+  <nav class="stepper" aria-label="ヒアリングの手順">
+    <button data-step="1"><span class="step-number">01</span><span>基本情報</span></button><span class="step-line"></span>
+    <button data-step="2"><span class="step-number">02</span><span>掲載する文章</span></button><span class="step-line"></span>
+    <button data-step="3" aria-current="step"><span class="step-number">03</span><span>デザインの好み</span></button><span class="step-line"></span>
+    <button data-step="4"><span class="step-number">04</span><span>内容の確認</span></button>
+  </nav>
+  <main id="main">
+    <section class="step-panel" data-panel="3">
+      <div class="page-intro"><div><p class="eyebrow-ui">FIND YOUR STYLE <span>03 / 04</span></p><h1>「自分らしい」が、<span class="serif-accent">見えてくる。</span></h1><p class="page-description">あなたの言葉やロゴで、20の雰囲気を見比べましょう。<br>惹かれるものを選ぶだけで、好みが伝わります。</p></div><div class="intro-note"><span class="note-spark">✳</span><p>選ぶのは、完成形ではなく<span>あなたの「好き」の方向性。</span><small>好みをもとに、デザイナーが個別に制作します。</small></p></div></div>
+      <div class="design-workspace">
+        <aside class="editor-panel" aria-label="プレビューに反映する情報">
+          <div class="editor-heading"><span class="editor-icon">Aa</span><div><h2>あなたの情報で見る</h2><p>入力すると、すべての見本に反映</p></div><span class="live-dot" title="リアルタイム反映"></span></div>
+          <div class="editor-fields">
+            <label>屋号・事務所名<input data-field="business" maxlength="60" placeholder="例：山田社会保険労務士事務所" autocomplete="organization"></label>
+            <div class="two-fields"><label>お名前<input data-field="name" maxlength="40" placeholder="例：山田 太郎" autocomplete="name"></label><label>資格・職種<input data-field="qualification" maxlength="60" placeholder="例：社会保険労務士"></label></div>
+            <label>見出し <span class="optional">任意</span><textarea data-field="headline" maxlength="100" rows="2" placeholder="あなたの専門性を、&#10;必要とする人へ。"></textarea></label>
+            <label>紹介文 <span class="optional">任意</span><textarea data-field="intro" maxlength="500" rows="3" placeholder="掲載文章で作った文章、またはお手元の文章を反映できます。"></textarea></label>
+            <button class="inline-link" data-goto="2">文章がまだない方はこちら <span>↗</span></button>
+            <div class="upload-row"><div><span class="field-title">ロゴ</span><label class="upload-control"><input type="file" data-upload="logo" accept="image/png,image/jpeg,image/webp"><span class="upload-symbol" data-upload-preview="logo">＋</span><span data-upload-label="logo">画像を選ぶ</span></label><button class="remove-image" data-remove="logo" hidden>削除</button></div><div><span class="field-title">プロフィール写真</span><label class="upload-control"><input type="file" data-upload="photo" accept="image/png,image/jpeg,image/webp"><span class="upload-symbol" data-upload-preview="photo">＋</span><span data-upload-label="photo">画像を選ぶ</span></label><button class="remove-image" data-remove="photo" hidden>削除</button></div></div>
+            <p class="field-hint">PNG・JPG・WebP／各5MBまで</p>
+          </div>
+          <div class="editor-foot"><span>↳</span><p>空欄には見本用の文章を表示します。<br><span id="sample-photo-hint">人物写真もサンプルです。</span></p></div>
+          <div class="preference-summary"><span class="mini-label">YOUR FAVORITES</span><div class="preference-title">気になる雰囲気 <span><b id="like-count">0</b> / 3</span></div><div id="favorites-list"><p class="empty-favorites">見本の「好き」を押してみましょう。</p></div><button id="compare-button" class="compare-button" disabled>選んだ雰囲気を比べる <span>↗</span></button><label class="delegate-option"><input type="checkbox" id="delegate-choice"> デザインはお任せしたい</label></div>
+        </aside>
+        <div class="gallery-area"><div class="gallery-toolbar"><div class="filters" role="group" aria-label="雰囲気で絞り込む"><button class="active" data-filter="all" aria-pressed="true">すべて <span>20</span></button><button data-filter="trust" aria-pressed="false">きちんと</button><button data-filter="quiet" aria-pressed="false">静か・上品</button><button data-filter="soft" aria-pressed="false">やさしい</button><button data-filter="future" aria-pressed="false">先進的</button><button data-filter="bold" aria-pressed="false">個性的</button></div><div class="gallery-caption"><span id="result-count">20のデザイン</span><span>同じ内容で、雰囲気だけを比較 <span class="tiny-grid">▦</span></span></div></div><div id="design-gallery" class="design-gallery"></div><p class="gallery-end">好きなところだけ、少しずつ。複数の好みを組み合わせて、あなたらしさを探しましょう。</p></div>
+      </div>
+    </section>
+    <section class="step-panel form-panel" data-panel="1" hidden>
+      <div class="section-intro"><p class="eyebrow-ui">ABOUT YOU <span>01 / 04</span></p><h1>まずは、あなたのこと。</h1><p>文章を考える必要はありません。わかるところから教えてください。</p></div>
+      <div class="form-sheet"><div class="sheet-title"><span>01</span><h2>お名前とお仕事</h2></div><div class="form-grid"><label>屋号・事務所名 <em>確認時に必要</em><input data-field="business" maxlength="60" placeholder="例：山田社会保険労務士事務所" autocomplete="organization"></label><label>お名前 <em>確認時に必要</em><input data-field="name" maxlength="40" placeholder="例：山田 太郎" autocomplete="name"></label><label>正確な資格名・職種 <em>確認時に必要</em><input data-field="qualification" maxlength="60" placeholder="例：社会保険労務士"></label><label>活動エリア<input data-field="location" maxlength="80" placeholder="例：福岡県福岡市"></label><label class="full-field">所在地 <span class="optional">任意・公開してよい範囲</span><input data-field="address" maxlength="160" placeholder="未定・掲載しない場合は空欄" autocomplete="street-address"></label></div><div id="basic-questions"></div></div>
+      <div class="form-sheet"><div class="sheet-title"><span>02</span><h2>連絡方法</h2></div><p class="muted">ホームページに掲載したい連絡方法を選んでください。</p><div id="contact-question"></div><div class="form-grid"><label id="email-label">メールアドレス<input data-field="email" type="email" maxlength="120" placeholder="contact@example.jp" autocomplete="email"></label><label id="phone-label">電話番号<input data-field="phone" type="tel" maxlength="30" placeholder="092-000-0000" autocomplete="tel"></label><label id="url-label">予約・お問い合わせページのURL<input data-field="contactUrl" type="url" maxlength="250" placeholder="https://"></label></div></div>
+    </section>
+    <section class="step-panel form-panel" data-panel="2" hidden>
+      <div class="section-intro"><p class="eyebrow-ui">YOUR WORDS <span>02 / 04</span></p><h1>言葉のかけらを、紹介文に。</h1><p>選択肢と短い言葉をもとに文章案を組み立てます。事実を確認して、掲載を承認してください。</p></div>
+      <div class="form-sheet"><div class="sheet-title"><span>01</span><h2>文章の材料</h2></div><div id="writing-questions"></div><div class="form-grid"><label>プロフィールの材料 <span class="optional">1行にひとつ</span><textarea id="material-profile" data-material="profile" rows="4" maxlength="600" placeholder="例：2026年に独立&#10;福岡市で開業"></textarea></label><label>実際に対応する業務 <span class="optional">1行にひとつ</span><textarea id="material-services" data-material="services" rows="4" maxlength="600" placeholder="例：就業規則の作成&#10;労務相談"></textarea></label><label class="full-field">大切にしていることの補足 <span class="optional">任意・短い言葉で</span><textarea id="material-values" data-material="values" rows="2" maxlength="500" placeholder="例：専門用語を使わず説明する"></textarea></label></div><p class="field-hint">入力していない経歴・実績・料金などを加えずに組み立てます。現在は定型文による文章案です。</p><button class="primary-button" id="generate-copy">入力内容から文章案をつくる <span>↗</span></button></div>
+      <div id="copy-sections"></div>
+    </section>
+    <section class="step-panel form-panel" data-panel="4" hidden>
+      <div class="section-intro"><p class="eyebrow-ui">READY FOR THE NEXT STEP <span>04 / 04</span></p><h1>あなたらしさを、制作の手がかりに。</h1><p>掲載情報・文章・デザインの好みをまとめました。</p></div><div id="review-content"></div>
+      <div class="form-sheet export-sheet"><h2>ヒアリング結果を保存する</h2><p>この試作画面では、制作担当者へ渡すファイルをダウンロードできます。<br>ダウンロードしても、制作担当者へは自動送信されません。</p><div id="completion-issues"></div><label class="review-consent"><input type="checkbox" id="review-consent"> 内容を確認し、承認した文章をホームページに掲載してよいことを確認しました。</label><div class="export-actions"><button class="primary-button" id="export-final">確認済みデータを保存 ↓</button><button class="secondary-button" id="export-draft">途中の内容を保存 ↓</button><button class="quiet-button" id="print-review">印刷 / PDF</button></div><p id="export-status" class="field-hint" role="status"></p></div>
+    </section>
+  </main>
+  <footer class="flow-footer"><div><button class="back-button" id="previous-step">← <span>掲載する文章へ</span></button><span class="footer-note">あとから変更できます</span></div><div><span id="footer-progress">STEP 03 / 04</span><button class="primary-button" id="next-step">好みを確認して、次へ <span>→</span></button></div></footer>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <dialog id="preview-dialog" class="preview-dialog"><div class="dialog-toolbar"><div><span id="modal-index" class="mini-label"></span><h2 id="modal-title"></h2></div><div class="device-switch" role="group" aria-label="プレビューの画面サイズ"><button data-device="desktop" aria-pressed="true" class="active">▱ PC</button><button data-device="mobile" aria-pressed="false">▯ スマホ</button></div><button class="close-button" data-close="preview-dialog" aria-label="プレビューを閉じる">×</button></div><div class="preview-disclaimer">好みを確認するための見本です。最終デザインは個別に制作します。</div><div id="modal-canvas" class="modal-canvas"></div><div class="modal-bottom"><span id="modal-description"></span><div><button class="secondary-button" id="modal-avoid">避けたい</button><button class="primary-button" id="modal-like">♡ この雰囲気が好き</button></div></div></dialog>
+  <dialog id="compare-dialog" class="compare-dialog"><div class="dialog-toolbar"><div><span class="mini-label">SIDE BY SIDE</span><h2>好きな雰囲気を、見比べる。</h2></div><button class="close-button" data-close="compare-dialog" aria-label="比較を閉じる">×</button></div><div id="compare-grid" class="compare-grid"></div><p class="compare-note">どれか1つに決めなくて大丈夫。それぞれの好きなところを制作に活かします。</p></dialog>
+  <dialog id="help-dialog" class="help-dialog"><button class="close-button" data-close="help-dialog" aria-label="使い方を閉じる">×</button><p class="eyebrow-ui">A SMALL GUIDE</p><h2>デザインは、見るだけで選べます。</h2><ol><li><b>あなたの情報を入れる</b><p>屋号や文章、ロゴ・写真を入れると20の見本に反映されます。未入力の部分はサンプル表示です。</p></li><li><b>直感で「好き」を選ぶ</b><p>3つまで選べます。避けたい雰囲気も記録できます。「拡大して見る」ではスマホ表示も確認できます。</p></li><li><b>文章と好みを確認する</b><p>好きな理由も選択肢で教えてください。見本は完成形の指定ではなく、個別制作の手がかりになります。</p></li></ol><p class="help-storage">入力内容と画像はこのブラウザに保存します。別の端末とは同期しません。共有端末では、確認後に保存内容を削除できます。</p><button class="secondary-button" id="reset-data">このブラウザの入力内容を削除</button><div id="reset-confirm" hidden><p>入力内容・画像・好み・文章の承認を削除します。</p><button id="confirm-reset" class="danger-button">削除する</button><button id="cancel-reset" class="quiet-button">キャンセル</button></div></dialog>
+</body></html>
